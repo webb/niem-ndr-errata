@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<errata xmlns="http://example.org/errata"
+        date="2015-03-30">
+  <doc name="National Information Exchange Model Naming and Design Rules"
+       version="3.0"
+       uri="http://reference.niem.gov/niem/specification/naming-and-design-rules/3.0/NIEM-NDR-3.0-2014-07-31.html">
+    
+    <section number="1.1" name="Scope">
+      <revision>
+        <from>and other other forms</from>
+        <to>and other forms</to>
+      </revision>
+    </section>
+    
+    <section number="2.4.3"
+             name="Normative XPath functions">
+      <revision>
+        <from>the first occurence of</from>
+        <to>the first occurrence of</to>
+      </revision>
+    </section>
+
+    <section number="4.1" name="Conformance targets defined">
+      <revision>
+        <from>of the characterstics and intent</from>
+        <to>of the characteristics and intent</to>
+      </revision>
+    </section>
+
+    <section number="4.1.3" name="Schema document set">
+      <revision>
+        <from>validating XML docments</from>
+        <to>validating XML documents</to>
+      </revision>
+    </section>
+
+    <section number="4.1.4" name="Instance documents and elements">
+      <revision>
+        <from>conformance contraints</from>
+        <to>conformance constraints</to>
+      </revision>
+    </section>
+
+    <section number="5" name="The NIEM conceptual model">
+      <revision>
+        <from>describes aspets of</from>
+        <to>describes aspects of</to>
+      </revision>
+    </section>
+
+    <section number="5.3" name="NIEM in terms of RDF">
+      <revision>
+        <from>NIEM NIEM objects</from>
+        <to>NIEM objects</to>
+      </revision>
+      <revision>
+        <from>associations conincide with</from>
+        <to>associations coincide with</to>
+      </revision>
+    </section>
+
+    <section number="5.6" name="Mapping of NIEM concepts to RDF concepts">
+      <revision>
+        <from>NIEM-conformant scheamas and</from>
+        <to>NIEM-conformant schemas and</to>
+      </revision>
+    </section>
+
+    <section number="5.6.5.3" name="Element as a property with unknown context">
+      <revision>
+        <from>to respresent the</from>
+        <to>to represent the</to>
+      </revision>
+    </section>
+
+    <section number="5.6.5.6" name="Elements via an augmentation type">
+      <revision>
+        <from>of a augmentation</from>
+        <to>of an augmentation</to>
+      </revision>
+      <revision>
+        <from>is an an instance</from>
+        <to>is an instance</to>
+      </revision>
+      <revision>
+        <from>is a the resource</from>
+        <to>is the resource</to>
+      </revision>
+    </section>
+
+    <section number="5.6.5.7" name="Attributes via an augmentation type">
+      <revision>
+        <from>is an an instance</from>
+        <to>is an instance</to>
+      </revision>
+      <revision>
+        <from>is a the resource</from>
+        <to>is the resource</to>
+      </revision>
+    </section>
+
+    <section number="5.6.5.8" name="Elements applied to an object via a metadata type">
+      <revision>
+        <from>is an an instance</from>
+        <to>is an instance</to>
+      </revision>
+      <revision>
+        <from>item $metdata that</from>
+        <to>item $metadata that</to>
+      </revision>
+      <revision>
+        <from>item $metdata that</from>
+        <to>item $metadata that</to>
+      </revision>
+      <revision>
+        <from>of $metdata-idref</from>
+        <to>of $metadata-idref</to>
+      </revision>
+      <revision>
+        <from>child of $metdata, that</from>
+        <to>child of $metadata, that</to>
+      </revision>
+      <revision>
+        <from>is a the resource</from>
+        <to>is the resource</to>
+      </revision>
+    </section>
+
+    <section number="5.6.5.9" name="Attributes applied to an object via a metadata type">
+      <revision>
+        <from>is an an instance</from>
+        <to>is an instance</to>
+      </revision>
+      <revision>
+        <from>item $metdata that</from>
+        <to>item $metadata that</to>
+      </revision>
+      <revision>
+        <from>of $metdata-idref</from>
+        <to>of $metadata-idref</to>
+      </revision>
+      <revision>
+        <from>by $metdata, that</from>
+        <to>by $metadata, that</to>
+      </revision>
+      <revision>
+        <from>is a the resource</from>
+        <to>is the resource</to>
+      </revision>
+    </section>
+
+    <section number="5.6.5.10" name="Elements applied to a relationship via a metadata type">
+      <revision>
+        <from>is an an instance</from>
+        <to>is an instance</to>
+      </revision>
+      <revision>
+        <from>item $metdata that</from>
+        <to>item $metadata that</to>
+      </revision>
+      <revision>
+        <from>of $metdata-idref</from>
+        <to>of $metadata-idref</to>
+      </revision>
+      <revision>
+        <from>is a the resource</from>
+        <to>is the resource</to>
+      </revision>
+    </section>
+
+    <section number="5.6.5.11" name="Attributes applied to a relationship via a metadata type">
+      <revision>
+        <from>is an an instance</from>
+        <to>is an instance</to>
+      </revision>
+      <revision>
+        <from>item $metdata that</from>
+        <to>item $metadata that</to>
+      </revision>
+      <revision>
+        <from>of $metdata-idref</from>
+        <to>of $metadata-idref</to>
+      </revision>
+      <revision>
+        <from>by $metdata, that</from>
+        <to>by $metadata, that</to>
+      </revision>
+      <revision>
+        <from>is a the resource</from>
+        <to>is the resource</to>
+      </revision>
+    </section>
+
+    <section number="6.1.2" name="Focus on rules for schemas">
+      <revision>
+        <from>specifying characterstics of</from>
+        <to>specifying characteristics of</to>
+      </revision>
+    </section>
+
+    <section number="6.2.5" name="Allow multiple schemas for XML constraints">
+      <revision>
+        <from>is prinicipally expressed</from>
+        <to>is principally expressed</to>
+      </revision>
+    </section>
+
+    <section number="7.6" name="IC-ISM and IC-NTK">
+      <revision>
+        <from>IC-NTK wthin NIEM-defined</from>
+        <to>IC-NTK within NIEM-defined</to>
+      </revision>
+    </section>
+
+    <section number="9.2.1" name="Element declaration">
+      <revision>
+        <from>into an conformant</from>
+        <to>into a conformant</to>
+      </revision>
+    </section>
+
+    <section number="9.3.1" name="Model group">
+      <revision>
+        <from>element occurrance within</from>
+        <to>element occurrence within</to>
+      </revision>
+    </section>
+
+    <section number="9.3.2" name="Particle">
+      <revision>
+        <from>is a element</from>
+        <to>is an element</to>
+      </revision>
+    </section>
+
+    <section number="9.4" name="Identity-constraint definition components">
+      <revision>
+        <from>keep consisent through</from>
+        <to>keep consistent through</to>
+      </revision>
+      <revision>
+        <from>xs:keyRef</from>
+        <to>xs:keyref</to>
+      </revision>
+    </section>
+
+    <section number="10.2.2" name="Role types and roles">
+      <revision>
+        <from>the rule, and</from>
+        <to>the role, and</to>
+      </revision>
+    </section>
+
+    <section number="10.2.3" name="External adapter types and external components">
+      <revision>
+        <from>may be constructured from</from>
+        <to>may be constructed from</to>
+      </revision>
+    </section>
+
+    <section number="10.3.1" name="Association types">
+      <revision>
+        <from>have a association</from>
+        <to>have an association</to>
+      </revision>
+    </section>
+
+    <section number="10.4" name="Augmentations">
+      <revision>
+        <from>some rrors in</from>
+        <to>some errors in</to>
+      </revision>
+      <revision>
+        <from>element substition and</from>
+        <to>element substitution and</to>
+      </revision>
+    </section>
+
+    <section number="10.4.1" name="Augmentable types">
+      <rule number="10-21" name="Augmentable type has augmentation point element">
+        <revision>
+          <from>value=&quot;QName(nf:get-target-namespace(.),</from>
+          <to>value=&quot;QName(string(nf:get-target-namespace(.)),</to>
+        </revision>
+      </rule>
+      <rule number="10-22" name="Augmentable type has at most one augmentation point element">
+        <revision>
+          <from>value=&quot;QName(nf:get-target-namespace(.),</from>
+          <to>value=&quot;QName(string(nf:get-target-namespace(.)),</to>
+        </revision>
+      </rule>
+    </section>
+
+    <!--
+
+    <section number="" name="">
+      <revision>
+        <from></from>
+        <to></to>
+      </revision>
+    </section>
+
+    -->
+
+    
+  </doc>
+</errata>
+<!--
+Local Variables:
+mode: sgml
+indent-tabs-mode: nil
+fill-column: 9999
+End:
+-->
