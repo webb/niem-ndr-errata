@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <errata xmlns="http://example.org/errata"
-        date="2015-03-30">
+        date="2015-04-04"
+        subject="NIEM Naming &amp; Design Rules, version 3.0">
   <doc name="National Information Exchange Model Naming and Design Rules"
        version="3.0"
        uri="http://reference.niem.gov/niem/specification/naming-and-design-rules/3.0/NIEM-NDR-3.0-2014-07-31.html">

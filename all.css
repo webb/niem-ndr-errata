@@ -1,0 +1,30 @@
+html {
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    font-size: 20px;
+}
+h2 {
+    font-size: 18px;
+}
+h3 {
+    font-size: 16px;
+}
+p {
+    font-size: 12px;
+    margin: 8px 0;
+}
+div.indent {
+    margin-left: 22px;
+}
+div.quote {
+    margin-left: 22px;
+    padding: 4px;
+    border: solid;
+    border-width: thin;
+    background-color: #ddd;
+}
+div.quote p {
+    margin: 0;
+}

@@ -10,10 +10,13 @@
   <xsl:template match="/e:errata">
     <html>
       <head>
-        <title>Errata <xsl:value-of select="@date"/></title>
+        <title>Errata for <xsl:value-of select="@subject"/></title>
+        <style test="text/css" media="all"
+               ><xsl:value-of select="unparsed-text('all.css')"/></style>
       </head>
       <body>
-        <h1>Errata <xsl:value-of select="@date"/></h1>
+        <h1><xsl:value-of select="@subject"/></h1>
+        <p><xsl:value-of select="@date"/></p>
         <xsl:apply-templates/>
       </body>
     </html>
@@ -21,7 +24,7 @@
 
   <xsl:template match="e:doc">
     <h2>Errata for <a href="{@uri}" target="other"><xsl:value-of select="@name"/>, version <xsl:value-of select="@version"/></a>.</h2>
-    <div style="margin-left: 2em;">
+    <div class="indent">
       <xsl:apply-templates/>
     </div>
   </xsl:template>
@@ -53,12 +56,14 @@
       </a>
       <xsl:text>, revise:</xsl:text>
     </p>
-    <div style="margin-left: 4em;">
-      <xsl:copy-of select="e:from/node()"/>
-    </div>
-    <p style="margin-left: 2em;">to:</p>
-    <div style="margin-left: 4em;">
-      <xsl:copy-of select="e:to/node()"/>
+    <div class="indent">
+      <div class="quote">
+        <p><xsl:copy-of select="e:from/node()"/></p>
+      </div>
+      <p>to:</p>
+      <div class="quote">
+        <p><xsl:copy-of select="e:to/node()"/></p>
+      </div>
     </div>
   </xsl:template>
   
