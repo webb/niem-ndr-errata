@@ -7,7 +7,7 @@
    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
    xmlns="http://www.w3.org/1999/xhtml">
 
-  <xsl:output method="xml" version="1.0" indent="yes"/>
+  <xsl:output method="xml" version="1.0" indent="no"/>
 
   <xsl:template match="/e:errata">
     <html>
