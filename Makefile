@@ -1,10 +1,12 @@
 
 .PHONY: all clean
 
-all: errata.html
+dest = niem-ndr-errata-artifacts/errata.html
 
-errata.html: errata.xml errata-to-html.xsl all.css
+all: $(dest)
+
+$(dest): errata.xml errata-to-html.xsl all.css
 	saxon --xsl=errata-to-html.xsl --in=$< --out=$@
 
 clean:
-	$(RM) errata.html
+	$(RM) $(dest)

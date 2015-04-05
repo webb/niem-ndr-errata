@@ -1,0 +1,3 @@
+[submodule "niem-ndr-errata-artifacts"]
+	path = niem-ndr-errata-artifacts
+	url = https://github.com/webb/niem-ndr-errata-artifacts.git
