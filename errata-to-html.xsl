@@ -7,6 +7,8 @@
    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
    xmlns="http://www.w3.org/1999/xhtml">
 
+  <xsl:output method="xml" version="1.0" indent="yes"/>
+
   <xsl:template match="/e:errata">
     <html>
       <head>
@@ -49,25 +51,52 @@
     <xsl:variable name="contexts" as="element()*"
                   select="ancestor::*[self::e:rule or self::e:section]"/>
 
+    <xsl:variable name="has-from" as="xs:boolean" select="exists(descendant::e:from)"/>
+
     <p>
       <xsl:text>In </xsl:text>
       <a href="{ancestor::e:doc[1]/@uri}#{$anchor}" target="other">
         <xsl:value-of select="string-join(for $context in $contexts return this:get-context-string($context), ', in ')"/>
       </a>
-      <xsl:text>, revise:</xsl:text>
+      <xsl:choose>
+        <xsl:when test="$has-from">
+          <xsl:text>, revise:</xsl:text>
+        </xsl:when>
+        <xsl:otherwise>, revise to:</xsl:otherwise>
+      </xsl:choose>
     </p>
     <div class="indent">
-      <div class="quote">
-        <p><xsl:copy-of select="e:from/node()"/></p>
-      </div>
-      <p>to:</p>
-      <div class="quote">
-        <p><xsl:copy-of select="e:to/node()"/></p>
-      </div>
+      <xsl:if test="$has-from">
+        <xsl:apply-templates select="e:from"/>
+        <p>to:</p>
+      </xsl:if>
+      <xsl:apply-templates select="e:to"/>
+    </div>
+  </xsl:template>
+
+  <xsl:template match="e:from | e:to">
+    <div class="quote">
+      <xsl:choose>
+        <xsl:when test="exists(descendant::*)">
+          <xsl:apply-templates/>
+        </xsl:when>
+        <xsl:otherwise>
+          <p>
+            <xsl:if test="@pre = 'true'">
+              <xsl:attribute name="class">pre</xsl:attribute>
+            </xsl:if>
+            <xsl:copy-of select="node()"/>
+          </p>
+        </xsl:otherwise>
+      </xsl:choose>
     </div>
   </xsl:template>
   
-  <xsl:template match="text()"/>
+  <xsl:template match="text()" priority="-1"/>
+
+  <xsl:template match="e:p//text()">
+    <xsl:copy-of select="."/>
+  </xsl:template>
 
   <xsl:function name="this:get-context-string" as="xs:string">
     <xsl:param name="context" as="element()"/>
@@ -86,6 +115,16 @@
       <xsl:text>&#8221;</xsl:text>
     </xsl:value-of>
   </xsl:function>
+
+  <xsl:template match="e:code | e:var | e:li | e:ul | e:p | e:em">
+    <xsl:element name="{local-name()}">
+      <xsl:apply-templates/>
+    </xsl:element>
+  </xsl:template>
+
+  <xsl:template match="*" priority="-1">
+    <xsl:message terminate="yes">Unexpected element: <xsl:value-of select="name()"/>.</xsl:message>
+  </xsl:template>
 
 </xsl:stylesheet>
 <!--

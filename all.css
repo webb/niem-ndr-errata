@@ -28,3 +28,13 @@ div.quote {
 div.quote p {
     margin: 0;
 }
+div.quote p:first-child {
+    margin-top: 0;
+}
+div.quote p + p, p + p {
+    margin-top: 8px;
+}
+p.pre {
+    white-space: pre-wrap;
+    font-family: "Courier New", Courier, monospace;
+}

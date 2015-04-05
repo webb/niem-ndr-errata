@@ -21,6 +21,8 @@
       </revision>
     </section>
 
+    <!-- ignore 3.4.2 -->
+
     <section number="4.1" name="Conformance targets defined">
       <revision>
         <from>of the characterstics and intent</from>
@@ -41,6 +43,8 @@
         <to>conformance constraints</to>
       </revision>
     </section>
+
+    <!-- ignore table 4-1 in section 4.2 -->
 
     <section number="5" name="The NIEM conceptual model">
       <revision>
@@ -214,17 +218,21 @@
     </section>
 
     <section number="9.2.1" name="Element declaration">
-      <revision>
-        <from>into an conformant</from>
-        <to>into a conformant</to>
-      </revision>
+      <rule number="9-40" name="Element type not in the XML namespace">
+        <revision>
+          <from>into an conformant</from>
+          <to>into a conformant</to>
+        </revision>
+      </rule>
     </section>
 
     <section number="9.3.1" name="Model group">
-      <revision>
-        <from>element occurrance within</from>
-        <to>element occurrence within</to>
-      </revision>
+      <rule number="9-59" name="Model group does not affect meaning">
+        <revision>
+          <from>element occurrance within</from>
+          <to>element occurrence within</to>
+        </revision>
+      </rule>
     </section>
 
     <section number="9.3.2" name="Particle">
@@ -260,10 +268,16 @@
     </section>
 
     <section number="10.3.1" name="Association types">
-      <revision>
-        <from>have a association</from>
-        <to>have an association</to>
-      </revision>
+      <rule number="10-19" name="Association type is derived from association type">
+        <revision>
+          <from>Association types is derived from association type</from>
+          <to>Association type is derived from association type</to>
+        </revision>
+        <revision>
+          <from>have a association</from>
+          <to>have an association</to>
+        </revision>
+      </rule>
     </section>
 
     <section number="10.4" name="Augmentations">
@@ -280,18 +294,154 @@
     <section number="10.4.1" name="Augmentable types">
       <rule number="10-21" name="Augmentable type has augmentation point element">
         <revision>
-          <from>value=&quot;QName(nf:get-target-namespace(.),</from>
-          <to>value=&quot;QName(string(nf:get-target-namespace(.)),</to>
+          <from pre="true">value=&quot;QName(nf:get-target-namespace(.),</from>
+          <to pre="true">value=&quot;QName(string(nf:get-target-namespace(.)),</to>
         </revision>
       </rule>
       <rule number="10-22" name="Augmentable type has at most one augmentation point element">
         <revision>
-          <from>value=&quot;QName(nf:get-target-namespace(.),</from>
-          <to>value=&quot;QName(string(nf:get-target-namespace(.)),</to>
+          <from pre="true">value=&quot;QName(nf:get-target-namespace(.),</from>
+          <to pre="true">value=&quot;QName(string(nf:get-target-namespace(.)),</to>
         </revision>
       </rule>
     </section>
 
+    <section number="10.4.3" name="Augmentation point element use">
+      <rule number="10-26" name="Augmentation point element may only be referenced by its type">
+        <revision>
+          <from pre="true">&lt;sch:assert test=&quot;QName(nf:get-target-namespace(ancestor::xs:complexType[1]), ancestor::xs:complexType[1]/@name)
+                  = QName(namespace-uri-from-QName(resolve-QName(@ref, .)),</from>
+          <to pre="true">&lt;sch:assert test=&quot;QName(string(nf:get-target-namespace(ancestor::xs:complexType[1])), ancestor::xs:complexType[1]/@name)
+                  = QName(string(namespace-uri-from-QName(resolve-QName(@ref, .))),</to>
+        </revision>
+      </rule>
+    </section>
+
+    <section number="10.4.5" name="Augmentation element declarations">
+      <rule number="10-35" name="Augmentation elements are not used directly">
+        <revision>
+          <from>element declration that</from>
+          <to>element declaration that</to>
+        </revision>
+      </rule>
+    </section>
+
+    <section number="10.5" name="Metadata">
+      <revision>
+        <from>use of metdata in</from>
+        <to>use of metadata in</to>
+      </revision>
+    </section>
+
+    <section number="10.5.1" name="Metadata types">
+      <rule number="10-37" name="Metadata type derived from structures:MetadataType">
+        <revision>
+          <from>used asis and</from>
+          <to>used as is and</to>
+        </revision>
+      </rule>
+    </section>
+
+    <section number="10.7" name="The &#8220;Representation&#8221; pattern">
+      <revision>
+        <from>distinct from element substition</from>
+        <to>distinct from element substitution</to>
+      </revision>
+      <rule number="10-42" name="A substitution for a representation element declaration is a value for a type">
+        <revision>
+          <from>for a a representation</from>
+          <to>for a representation</to>
+        </revision>
+      </rule>
+    </section>
+
+    <section number="10.8.5" name="Property term">
+      <revision>
+        <from>or subpartof an</from>
+        <to>or subpart of an</to>
+      </revision>
+    </section>
+
+    <section number="10.9.2" name="The NIEM local terminology namespace">
+      <rule number="10-74" name="term:LocalTerm annotates schema">
+        <revision>
+          <from>information an an</from>
+          <to>information on an</to>
+        </revision>
+      </rule>
+    </section>
+
+    <section number="11.2.1" name="Element declaration">
+      <rule number="11-13" name="Element type does not have a simple type name">
+        <revision>
+          <from>document defins the</from>
+          <to>document defines the</to>
+        </revision>
+      </rule>
+    </section>
+
+    <section number="11.3.2.1" name="Element use">
+      <rule number="11-21" name="Element or attribute declaration introduced only once into a type">
+        <revision>
+          <from>attribute decaration MUST NOT</from>
+          <to>attribute declaration MUST NOT</to>
+        </revision>
+      </rule>
+    </section>
+
+    <section number="11.6.1.1" name="Data definition opening phrases">
+      <rule number="11-31" name="Standard opening phrase for element">
+        <revision>
+          <from>data defintion for</from>
+          <to>data definition for</to>
+        </revision>
+      </rule>
+      <rule number="11-32" name="Standard opening phrase for complex type">
+        <revision>
+          <from>for (metdata about</from>
+          <to>for (metdata about</to>
+        </revision>
+      </rule>
+    </section>
+
+    <section number="11.8.1" name="Supporting namespaces are imported as conformant">
+      <rule number="11-39" name="XML namespace imported as conformant">
+        <revision>
+          <from>be labeld as</from>
+          <to>be labeled as</to>
+        </revision>
+      </rule>
+    </section>
+
+    <section number="12.2" name="Reference elements">
+      <revision>
+        <from>have a relationshp to</from>
+        <to>have a relationship to</to>
+      </revision>
+    </section>
+
+    <rule number="12-5" name="Attribute structures:ref references element of correct type">
+      <revision>
+        <to>
+          <p>Given that:</p>
+          <ul>
+            <li><p><var>$element</var> is an element information item</p></li>
+            <li><p><var>$element</var> has attribute <code>structures:ref</code> with value <var>$ref</var></p></li>
+            <li><p><var>$element</var> has property [type definition] with value called the <em>referencing element type definition</em>.</p></li>
+            <li><p><var>$target</var> is an element information item</p></li>
+            <li><p><var>$target</var> has attribute <code>structures:id</code> with value <var>$ref</var></p></li>
+            <li><p><var>$target</var> has property [type definition] with value called the referenced element type definition</p></li>
+          </ul>
+          <p>Every element that has an attribute <code>structures:ref</code> MUST have a <em>referencing referenced element type definition</em> that is validly derived from the <em>referenced referencing element type definition</em>.</p>
+        </to>
+      </revision>
+      <revision>
+        <from>This rule requires that the type of the element information item pointed to by a structures:ref attribute must be of (or derived from) the type that is specified by the element declaration of the reference element.</from>
+        <to>This rule requires that the type of the element pointed to by a structures:ref attribute must be of (or derived from) the type of the reference element.</to>
+      </revision>
+    </rule>
+
+    
     <!--
 
     <section number="" name="">
